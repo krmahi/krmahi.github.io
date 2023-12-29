@@ -1,0 +1,428 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 14px;
+	--color-text: #000;
+	--color-bg: #21211e;
+	--color-link: #000;
+	--color-link-hover: #000;
+	--page-padding: 1rem;
+	--columns: 15;
+	--cursor-blend-mode: difference;
+	--cursor-radius: 0;
+}
+
+.demo-1 {
+	--color-text: #cdbcbc;
+	--color-bg: #211f1f;
+	--color-link: #fff;
+	--color-link-hover: #fff;
+	--cursor-bg: #c15cb7;
+	--cursor-blend-mode: exclusion;
+	--gradient-text-1: #e8c942;
+	--gradient-text-2: rgb(148 98 209);
+	/* background-image: url(../img/bg1.jpg); */
+}
+
+body {
+	margin: 0;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	font-family: "source-code-pro", monospace;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	height: 100vh;
+	overflow: hidden;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	/* transition: background-color 0.3s ease; */
+}
+/* hide scroll bar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Page Loader */
+.js .loading::before,
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 1000;
+}
+
+.js .loading::before {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color-bg);
+}
+
+.js .loading::after {
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	border-radius: 50%;
+	opacity: 0.4;
+	background: var(--color-link);
+	animation: loaderAnim 0.7s linear infinite alternate forwards;
+
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 1;
+		transform: scale3d(0.5,0.5,1);
+	}
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-link);
+	outline: none;
+	cursor: pointer;
+}
+
+a:hover {
+	color: var(--color-link-hover);
+	outline: none;
+}
+
+/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+a:focus {
+	/* Provide a fallback style for browsers
+	 that don't support :focus-visible */
+	outline: none;
+	background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+	/* Remove the focus indicator on mouse-focus for browsers
+	 that do support :focus-visible */
+	background: transparent;
+}
+
+a:focus-visible {
+	/* Draw a very noticeable focus style for
+	 keyboard-focus on browsers that do support
+	 :focus-visible */
+	outline: 2px solid red;
+	background: transparent;
+}
+
+.unbutton {
+	background: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	cursor: pointer;
+}
+
+.unbutton:focus {
+	outline: none;
+}
+
+.frame {
+	/* background-color: #211f1f; */
+	position: sticky;
+	top: 0;
+	width: 100%;
+	padding: var(--page-padding);
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-areas: 'title' 'prev' 'sponsor' 'demos';
+	grid-gap: 0.5rem;
+	justify-items: start;
+	align-self: start;
+	justify-self: start;
+	pointer-events: none;
+	align-items: center;
+	z-index: 999;
+}
+
+body #cdawrap {
+    justify-self: start;
+}
+
+.frame a {
+	pointer-events: auto;
+}
+
+.frame__title {
+	grid-area: title;
+	display: flex;
+}
+
+.frame__title-main {
+	font-size: inherit;
+	margin: 0;
+	font-weight: inherit;
+}
+
+.frame__title-back {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 0.15rem;
+}
+
+.frame__title-back span {
+	display: none;
+}
+
+.frame__title-back svg {
+	fill: currentColor;
+}
+
+.frame__prev {
+	grid-area: prev;
+}
+
+.frame__demos {
+	grid-area: demos;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.frame__demos-item:first-child {
+	width: 100%;
+}
+
+a.frame__demos-item {
+	font-weight: bold;
+}
+
+.content {
+	padding: 0 var(--page-padding);
+	display:flex;
+	flex-direction: column;
+	width: 100vw;
+	min-height: 27vh;
+	position:relative;
+	justify-content: space-between;
+	align-items: center;
+
+	font-weight: 300;
+
+	overflow:auto;
+}
+
+.content h2 {
+	display: flex;
+	font-size:12vh;
+	line-height: 1;
+	margin: 0;
+	pointer-events:none;
+	font-family: "greycliff-cf", sans-serif;
+	background-color: var(--gradient-text-1);
+	background-image: linear-gradient(45deg, var(--gradient-text-1), var(--gradient-text-2));
+	background-size: 100%;
+	background-repeat: repeat;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+}
+
+.content h4 {
+	display: flex;
+	/* flex-direction: row; */
+	align-items: center;
+	justify-content:center;
+	font-size:18px;
+	max-width: 70ch;
+	text-align: justify;
+	margin: 0.5vw;
+	pointer-events: none;
+}
+
+em {
+	pointer-events: none;
+}
+
+
+
+/* skills-title */
+/* .skills-title {
+	display: flex;
+	font-size: 2vh;
+	align-items: center;
+	padding-left: 25vw;
+	padding-bottom: 0%;
+	pointer-events:none;
+	color: #40c9ff;
+} */
+/* skills-title-end */
+
+/* test */
+.card-div {
+	display: flex;
+	flex-direction: row;
+	padding: 20px;
+
+}
+
+.card {
+	/* width: 100%; 
+    max-width: 600px; */
+
+	margin: 10px;
+	width: 320px;
+	height: 65px;
+	padding: 20px;
+	color: white;
+	background: linear-gradient(#212121, #212121) padding-box,
+				linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+	border: 2px solid transparent;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	transform-origin: right bottom;
+	transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+#first-pad {
+	margin-left: 22vw;
+}
+.card .main-content {
+	flex: 1;
+}
+
+.card .header span:first-child {
+	font-weight: 600;
+	/* color: #e8c942; */
+	margin-right: 4px;
+	font-size: 20px;
+}
+
+.first-card {
+	color: #e8c942;
+}
+
+.sec-card {
+	color: #40c9ff;
+}
+
+.third-card {
+	color: #e81cff;
+}
+
+#first-skills span {
+	background-color: #303030;
+	color :#fffaea;
+}
+
+#sec-skills span {
+	background-color: #303030;
+	color :#e4f7ff;
+}
+
+#third-skills span {
+	background-color: #303030;
+	color :#fdebff;
+}
+	s
+.card .heading {
+	font-size: 24px;
+	margin: 24px 0 16px;
+	font-weight: 600;
+}
+
+.card .categories {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.card .categories span {
+	background-color: #f46b9d;
+	padding: 4px 8px;
+	font-size: 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	border-radius: 50em;
+	margin: 1px;
+}
+
+/* .card .footer {
+	font-weight: 600;
+	color: #717171;
+	margin-right: 4px;
+}
+   */
+.card:hover {
+	rotate: 8deg;
+}
+  /* test-end */
+
+.cursor {
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	z-index: 99;
+	mix-blend-mode: var(--cursor-blend-mode);
+	--size: calc(100vw / var(--columns));
+}
+
+.cursor__inner {
+	display: grid;
+	grid-template-columns: repeat(var(--columns), var(--size));
+}
+
+.cursor__inner-box {
+	width: var(--size);
+	height: var(--size);
+	background: var(--cursor-bg);
+	opacity: 0;
+	border-radius: var(--cursor-radius);
+}
+
+@media screen and (min-width: 53em) {
+	:root {
+		--columns: 30;
+		--page-padding: 2rem;
+	}
+	.frame {
+		grid-template-columns: auto auto auto 1fr;
+		grid-template-areas: 'title prev sponsor demos';
+		justify-items: start;
+		grid-gap: 2rem;
+	}
+	.frame__demos {
+		justify-self: end;
+	}
+	.frame__demos-item:first-child {
+		width: auto;
+	}
+	.content {
+		align-items: center;
+	}
+}
+
+/* scrolling_text */
+/* .scrolling_text{
+	position: sticky;
+    top: 0;
+    text-align: center;
+    transition: font-size 0.3s ease;
+	font-size: 16vw;
+}
+
+.scrolling_text::first-letter, .scrolling_text::nth-letter(5) {
+    font-style: italic;
+} */
