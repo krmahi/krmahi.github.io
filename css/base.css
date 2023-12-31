@@ -322,6 +322,7 @@ a.frame__demos-item {
 	display: block;
 	font-size:6vw;
 	line-height: 1;
+	letter-spacing: -3px;
 	margin: auto;
 	pointer-events:none;
 	font-family: "greycliff-cf", sans-serif;
@@ -408,27 +409,51 @@ em {
 	flex-direction: column;
 	}
 }
-.w-card img{
+
+
+.w-card img {
 	position: absolute;
-	/* width: 100%; */
 	height: 50px;
-	padding-top: 100px;
+	/* padding-top: 100px; */
 	padding-left: 18rem;
-	/* object-fit: cover; */
 	border-radius: 8px;
 	z-index: -1;
 }
 
-.w-card:hover img {
-	padding-top: 10px;
+.w-card:hover #devtown-img {
+	/* width: 70px; */
+	height: 100px;
+	/* margin-top: 10; */
+	padding-left: 16rem;
+	/* margin-right: 20rem; */
 	z-index: 1;
-	transition: all 0.3s ease;
+	transition: all 0.2s ease;
 }
-/* @media (max-width: 980px) {
-	.card {
-	padding-bottom: 310px;
+.w-card:hover img {
+	/* width: 70px; */
+	height: 100px;
+	/* margin-top: 10; */
+	padding-left: 19rem;
+	/* margin-right: 20rem; */
+	z-index: 1;
+	transition: all 0.2s ease;
+}
+
+@media (max-width: 460px) {
+	.w-card img {
+		padding-left: 19.5rem;
+		z-index: 1;
+		height: 80px; /* Add this line to stop height increase */
 	}
-} */
+}
+
+@media (max-width: 460px) {
+	.w-card #devtown-img {
+	height: 90px;
+	padding-left: 16rem;
+	z-index: 1;
+	}
+}
 
 /* #first-pad {
 	margin-left: 22vw;
@@ -508,6 +533,7 @@ em {
 	padding: 4px 8px;
 	font-size: 14px;
 	font-weight: 600;
+	/* letter-spacing: 1px; */
 	/* text-transform: uppercase; */
 	border-radius: 1em;
 	margin: 1px;
@@ -533,7 +559,7 @@ em {
 	margin: 10px;
 	width: 320px;
 	min-width: 320PX;
-	height: 420px;
+	height: 425px;
 	background-image: linear-gradient(163deg, #b62d8f 0%, #ccd215 100%);
 	border-radius: 20px;
 	transition: all .3s;
@@ -545,7 +571,7 @@ em {
 	padding: 20px;
 	width: 320px;
 	min-width: 320PX;
-	height: 420px;
+	height: 425px;
 	flex-direction: column;
 	/* font-size: 17px; */
 	color: #aea9a9;
@@ -566,6 +592,7 @@ em {
 
 .w-card2 .header span:first-child {
 	font-weight: 600;
+	line-height: 3rem;
 	/* color: #e8c942; */
 	margin-right: 4px;
 	font-size: 20px;
