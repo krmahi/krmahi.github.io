@@ -16,12 +16,26 @@
 	--cursor-radius: 0;
 }
 
+footer {
+    background-color: #211f1f;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #d2bfbf;
+    font-size: 14px;
+}
 .demo-1 {
 	--color-text: #cdbcbc;
 	--color-bg: #211f1f;
 	--color-link: #fff;
 	--color-link-hover: #fff;
-	--cursor-bg: #c15cb7;
+	--cursor-bg: #be2ee6;
 	--cursor-blend-mode: exclusion;
 	--gradient-text-1: #e8c942;
 	--gradient-text-2: rgb(148 98 209);
@@ -51,6 +65,7 @@ body::-webkit-scrollbar {
 
 /* resume button */
 button {
+	cursor: pointer;
 	text-decoration: none;
 	display: block;
 	margin: auto;
@@ -67,6 +82,8 @@ button {
 	background-size: 300%;
 	border-radius: 30px;
 	z-index: 1;
+	animation: ani 8s linear infinite;
+	border: none;
 }
 
 @media (max-width: 550px) {
@@ -86,11 +103,11 @@ button:hover {
 	}
 
 	100% {
-	  background-position: 400%;
+	background-position: 400%;
 	}
-  }
-  
-  button:before {
+}
+
+button:before {
 	content: '';
 	position: absolute;
 	top: -5px;
@@ -98,19 +115,23 @@ button:hover {
 	right: -5px;
 	bottom: -5px;
 	z-index: -1;
-	background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+	background: linear-gradient(90deg,#f441a5,#ffeb3b);
 	background-size: 400%;
 	border-radius: 35px;
 	transition: 1s;
-  }
-  
-  button:hover::before {
+	filter: blur(18px);
+	/* cursor: pointer; */
+	/* pointer-events: none; */
+}
+
+button:hover::before {
 	filter: blur(20px);
-  }
-  
-  button:active {
+	/* cursor: pointer; */
+}
+
+button:active {
 	background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
-  }
+}
 /* resume button end */
 
 /* Page Loader */
@@ -197,7 +218,7 @@ a:focus-visible {
 }
 
 .frame {
-	/* background-color: #211f1f; */
+	background-color: #211f1f;
 	position: sticky;
 	top: 0;
 	width: 100%;
@@ -212,7 +233,7 @@ a:focus-visible {
 	justify-self: start;
 	pointer-events: none;
 	align-items: center;
-	z-index: 999;
+	z-index: 99;
 }
 
 body #cdawrap {
@@ -291,7 +312,7 @@ a.frame__demos-item {
 
 .content h2 {
 	display: block;
-	font-size:12vh;
+	font-size:6vw;
 	line-height: 1;
 	margin: auto;
 	pointer-events:none;
@@ -304,6 +325,18 @@ a.frame__demos-item {
 	-webkit-text-fill-color: transparent; 
 	-moz-background-clip: text;
 	-moz-text-fill-color: transparent;
+}
+
+@media (max-width: 1100px) {
+	.content h2 {
+		font-size:10vw;
+	}
+}
+
+@media (max-width: 500px) {
+	.content h2 {
+		font-size:12vw;
+	}
 }
 
 .content h4 {
@@ -320,7 +353,7 @@ a.frame__demos-item {
 
 @media (max-width: 750px) {
 	.content h4 {
-	text-align:center;
+	text-align:left;
 	}
 }
 
@@ -385,6 +418,7 @@ em {
 	padding-bottom: 310px;
 	}
 }
+
 /* #first-pad {
 	margin-left: 22vw;
 } */
@@ -466,7 +500,7 @@ em {
 	left: 0;
 	top: 0;
 	pointer-events: none;
-	z-index: 99;
+	z-index: 999;
 	mix-blend-mode: var(--cursor-blend-mode);
 	--size: calc(100vw / var(--columns));
 }
