@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "development"
+  ],
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_chr <= 120",
+    "not chrome <= 120",
+    "not edge <= 120",
+    "not opera <= 104",
+    "not samsung <= 23"
+  ],
+  "hints": {
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id": "off"
+      }
+    ],
+    "button-type": "off"
+  }
+}
