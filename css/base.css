@@ -375,6 +375,67 @@ em {
 	pointer-events: none;
 }
 
+/* pw-card */
+
+/* .title .pw-card {
+	position: relative;
+} */
+
+#github-logo {
+	position: absolute;
+	height: 40px;
+	top: 100px;
+	left: 150px;
+}
+
+.tracker:hover .pw-card {
+	display:block;
+}
+.pw-card {
+	display: none;
+	/* position: absolute; */
+	width: 190px;
+	height: 254px;
+	margin: 0 auto;
+	background-color: #555;
+	border-radius: 8px;
+	z-index: 1;
+}
+
+.tools {
+	display: flex;
+	align-items: center;
+	padding: 9px;
+}
+
+.circle {
+	padding: 0 4px;
+}
+
+.box {
+	display: inline-block;
+	align-items: center;
+	width: 10px;
+	height: 10px;
+	padding: 1px;
+	border-radius: 50%;
+}
+
+.red {
+	background-color: #ff605c;
+}
+
+.yellow {
+	background-color: #ffbd44;
+}
+
+.green {
+	background-color: #00ca4e;
+}
+
+
+/* pw-card-end */
+
 /* test */
 .card-div {
 	display: flex;
@@ -405,7 +466,7 @@ em {
 	.card-div {
 		margin: auto;
 		padding: 0px;
-		
+
 	}
 }
 
@@ -789,7 +850,7 @@ em {
 #prompt {
 	bottom: 8px;
 	left: 12px;
-	z-index:20;
+	z-index: 20;
 	font-size: 20px;
 	font-weight: bold;
 	transition: 300ms ease-in-out-out;
