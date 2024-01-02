@@ -404,6 +404,8 @@ em {
 @media (max-width: 610px) {
 	.card-div {
 		margin: auto;
+		padding: 0px;
+		
 	}
 }
 
@@ -450,7 +452,8 @@ em {
 
 @media (max-width: 610px) {
 	.project-card-div {
-		margin: auto;
+		margin: 0px;
+		padding: 0px;
 	}
 }
 
@@ -462,7 +465,7 @@ em {
 	/*padding-bottom: 310px; to change size of the card*/
 	margin: 10px;
 	width: 320px;
-	min-width: 320px;
+	/* min-width: 320px; */
 	height: 340px;
 	color: white;
 	background: linear-gradient(#212121, #212121) padding-box,
