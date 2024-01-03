@@ -384,25 +384,28 @@ em {
 } */
 
 #github-logo {
-	position: absolute;
+	
+	/* position: absolute; */
+	/* padding-top: 0px; */
+	/* padding-left: 365px; */
 	height: 40px;
-	top: 100px;
-	left: 150px;
+	/* top: 100px;
+	left: 1500px; */
 }
 
-.tracker:hover .pw-card {
+/* .tracker:hover .pw-card {
 	display:block;
-}
-.pw-card {
+} */
+/* .pw-card {
 	display: none;
-	/* position: absolute; */
+	position: absolute;
 	width: 190px;
 	height: 254px;
 	margin: 0 auto;
 	background-color: #555;
 	border-radius: 8px;
 	z-index: 1;
-}
+} */
 
 .tools {
 	display: flex;
@@ -475,6 +478,7 @@ em {
 
 
 .project-card-div {
+	/* background-color: white; */
 	display: flex;
 	/* margin-top: 0px; */
 	margin-left: 265px;
@@ -515,8 +519,9 @@ em {
 
 @media (max-width: 610px) {
 	.project-card-div {
-		margin: 0px;
-		padding: 0px;
+		margin: 0;
+		padding: 0;
+		
 	}
 }
 
@@ -797,25 +802,25 @@ em {
 .container {
 	display: flex;
 	margin: 10px;
-	width: 320px;
-	min-width: 320px;
-	height: 440px;
+	min-width: 190px;
 	position: relative;
-	width: 190px;
+	width: 320px;
 	height: 300px;
 	transition: 200ms;
 
 }
 
-.container:active {
-	width: 180px;
-	height: 245px;
+@media (min-width: 510px) {
+	.container:hover {
+		width: 450px;
+		height: 400px;
+	}
 }
 
 #p-card {
 	position: absolute;
 	inset: 0;
-	z-index: 0;
+	z-index: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -839,18 +844,33 @@ em {
 	text-indent: -9999px;
 }
 .title {
+	position: absolute;
+	margin: auto;
+	padding-left: 10px;
+	padding-right: 10px;
 	opacity: 0;
 	transition-duration: 300ms;
 	transition-timing-function: ease-in-out-out;
-	transition-delay: 100ms;
-	position: absolute;
-	font-size: x-large;
-	font-weight: bold;
+	transition-delay: 0ms;
+	font-size: 0.8rem;
+	font-weight: 500px;
 	color: rgb(255, 255, 255);
 }
 
-.tracker:hover~#p-card .title {
-	opacity: 1;
+@media (max-width: 510px) {
+	.tracker:hover~#p-card .title {
+		font-size: 0.9rem;
+		opacity: 1;
+		transition: 300ms;
+	}
+}
+@media (min-width: 400px) {
+	.tracker:hover~#p-card .title {
+		opacity: 1;
+		font-size: 1.3rem;
+		transition: 300ms;
+	}
+	
 }
 
 #prompt {
@@ -885,6 +905,10 @@ em {
 	filter: brightness(1.1);
 }
 
+.tracker:focus .project-content {
+	display: block;
+}
+
 .container:hover #p-card::before {
 	transition: 200ms;
 	content: "";
@@ -907,6 +931,7 @@ em {
 		"tr-16 tr-17 tr-18 tr-19 tr-20"
 		"tr-21 tr-22 tr-23 tr-24 tr-25";
 }
+
 
 #p-card::before {
 	content: "";
