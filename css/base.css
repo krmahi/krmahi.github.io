@@ -47,7 +47,7 @@ footer p {
 	--cursor-bg: #a755be;
 	--cursor-blend-mode: exclusion;
 	--gradient-text-1: #e8c942;
-	--gradient-text-2: rgb(148 98 209);
+	--gradient-text-2: rgb(182, 17, 113);
 	/* background-image: url(../img/bg1.jpg); */
 }
 
@@ -338,8 +338,10 @@ a.frame__demos-item {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-moz-background-clip: text;
+	background-clip: text;
 	-moz-text-fill-color: transparent;
 }
+
 
 @media (max-width: 1100px) {
 	.content h2 {
@@ -1170,22 +1172,40 @@ em {
 
 .work-title {
 	align-items: center;
-	background-color: transparent;
-	color: #cdbcbc;
-	cursor: pointer;
+	/* background-color: transparent; */
+	color: #cdbcbc;	
+	/* cursor: pointer; */
 	display: flex;
+	-webkit-background-clip: text;
+	/* background-size: 30% 100%; */
+	/* background-repeat: no-repeat; */
+	background-clip: text;
+	background-image: linear-gradient(45deg,
+			rgb(200, 80, 192),
+			rgb(255, 204, 112));
+	-webkit-text-fill-color: transparent;
 	/* font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
 	font-size: 2.5rem;
 	font-weight: 700;
 	line-height: 1.5;
-	text-decoration: none;
-	text-transform: uppercase;
+	/* text-decoration: none; */
+	/* text-transform: uppercase; */
 	outline: 0;
 	border: 0;
 	padding: 1rem;
 	pointer-events: painted;
 	cursor: default;
+	/* animation:scroll-text linear forwards; */
+	/* animation-timeline: view(); */
 }
+
+/* @keyframes scroll-text {
+	to{
+		background-size: 100% 100%;
+	}
+} */
+
+
 
 .work-title:before {
 	background-color: rgb(207, 25, 149);
@@ -1199,6 +1219,11 @@ em {
 
 .work-title:hover:before {
 	background-color: #fbc2c2;
+	background-clip: text;
+	background-image: linear-gradient(45deg,
+			rgb(200, 80, 192),
+			rgb(255, 204, 112));
+	-webkit-text-fill-color: transparent;
 	width: 4.5rem;
 }
 
