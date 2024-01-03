@@ -1253,6 +1253,7 @@ em {
 }
 
 .cursor {
+	/* opacity: 1; */
 	height: 100%;
 	position: fixed;
 	width: 100%;
@@ -1262,6 +1263,12 @@ em {
 	z-index: 999;
 	mix-blend-mode: var(--cursor-blend-mode);
 	--size: calc(100vw / var(--columns));
+}
+
+@media (max-width: 400px) {
+	.cursor {
+		opacity: 0;
+	}
 }
 
 .cursor__inner {
