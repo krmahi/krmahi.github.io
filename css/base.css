@@ -16,6 +16,7 @@
 	--cursor-radius: 0;
 }
 
+
 ::selection {
 	background: rgba(174, 106, 171, 0.5);
 	/* Semi-transparent light red */
