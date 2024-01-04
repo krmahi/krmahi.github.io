@@ -749,7 +749,12 @@ em {
 	rotate: 8deg;
 }
 
+.w-card2:hover #inter-footer {
+	color: #40c9ff;
+}
+
 /* test-end */
+
 
 /* work-card */
 
