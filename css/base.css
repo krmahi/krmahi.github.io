@@ -1316,6 +1316,12 @@ em {
 	text-shadow: 0px 0px 50px rgba(169, 87, 54, 0.9);
 }
 
+@media (max-width: 1100px) {
+	.work-title {
+		font-size: 1.8rem;
+	}
+}
+
 /* @keyframes scroll-text {
 	to{
 		background-size: 100% 100%;
