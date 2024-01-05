@@ -99,7 +99,7 @@ body {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	height: 100vh;
-	overflow: hidden;
+	overflow-x: hidden;
 	overflow-y:scroll;
 	scroll-behavior: smooth;
 	transition: background-color 0.3s ease;
