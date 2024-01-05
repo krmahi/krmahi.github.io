@@ -16,6 +16,13 @@
 	--cursor-radius: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+	
+}
+
+
+
 /* 
 @media (min-width: 600px){
 .dreams-home-hero__image {
@@ -88,6 +95,8 @@ footer p {
 }
 
 body {
+	
+	cursor: url('/img/cursor-alt-svgrepo-com.svg'), auto;
 	/* margin-bottom: 100%; */
 	margin: 0;
 	color: var(--color-text);
@@ -101,7 +110,31 @@ body {
 	height: 100vh;
 	overflow-x: hidden;
 	overflow-y:scroll;
-	scroll-behavior: smooth;
+
+	transition: background-color 0.3s ease;
+	}
+
+	/* main{
+	overflow: hidden;
+	} */
+
+	/* hide scroll bar */
+	body::-webkit-scrollbar {
+	display:none;
+	/* margin-bottom: 100%; */
+	margin: 0;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	font-family: "source-code-pro", monospace;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y:scroll;
+	
 	transition: background-color 0.3s ease;
 }
 
