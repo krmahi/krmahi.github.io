@@ -61,7 +61,7 @@ footer {
 	background-color: #000000;
 	text-align: center;
 	padding: 5px;
-	position: sticky;
+	position: relative;
 	left: 0;
 	bottom: 0;
 	width: 100%;
@@ -100,10 +100,14 @@ body {
 	background-repeat: no-repeat;
 	height: 100vh;
 	overflow: hidden;
-	overflow-y: scroll;
+	overflow-y:scroll;
 	scroll-behavior: smooth;
 	transition: background-color 0.3s ease;
 }
+
+/* main{
+	overflow: hidden;
+} */
 
 /* hide scroll bar */
 body::-webkit-scrollbar {
