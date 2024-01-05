@@ -425,7 +425,7 @@ a.frame__demos-item {
 	text-align: center;
 	margin: 0.5vw;
 	pointer-events: none;
-	text-shadow: 0px 0px 100px rgba(119, 107, 101, 0.9); /* Adjust the shadow properties as needed */
+	text-shadow: 0px 0px 50px rgba(169, 87, 54, 0.9);
 }
 
 /* @media (max-width: 750px) {
@@ -436,6 +436,7 @@ a.frame__demos-item {
 
 em {
 	pointer-events: none;
+	text-shadow: 0px 0px 25px rgba(169, 87, 54, 0.9);
 }
 
 /* pw-card */
@@ -1309,6 +1310,7 @@ em {
 	cursor: default;
 	/* animation:scroll-text linear forwards; */
 	/* animation-timeline: view(); */
+	text-shadow: 0px 0px 50px rgba(169, 87, 54, 0.9);
 }
 
 /* @keyframes scroll-text {
