@@ -1352,6 +1352,7 @@ em {
 	z-index: 999;
 	mix-blend-mode: var(--cursor-blend-mode);
 	--size: calc(100vw / var(--columns));
+	
 }
 
 @media (max-width: 400px) {
@@ -1371,6 +1372,7 @@ em {
 	background: var(--cursor-bg);
 	opacity: 0;
 	border-radius: var(--cursor-radius);
+	box-shadow: 0px 0px 40px #b82660;;
 }
 
 @media screen and (min-width: 53em) {
