@@ -107,7 +107,7 @@ body {
 
 /* hide scroll bar */
 body::-webkit-scrollbar {
-	display:block;
+	display:none;
 }
 
 /* resume button */
@@ -349,6 +349,7 @@ a.frame__demos-item {
 
 .content {
 	padding: 0 var(--page-padding);
+	margin: 13px 0 0 0;
 	display: flex;
 	flex-direction: column;
 	/* width: 100vw; */
@@ -361,6 +362,8 @@ a.frame__demos-item {
 
 	/* overflow: auto; */
 }
+
+
 
 .button-container {
 	display: flex;
@@ -619,7 +622,7 @@ em {
 	/* min-width: 320px; */
 	height: 340px;
 	color: white;
-	background: #121212;
+	background: #151515;
 	border-radius: 8px;
 
 	flex-direction: column;
@@ -752,14 +755,14 @@ em {
 }
 
 .card .categories span {
-	background-color: #f46b9d;
+	/* background-color: #f46b9d; */
 	padding: 4px 8px;
 	font-size: 15px;
 	font-weight: 600;
 	text-transform: uppercase;
 	border-radius: 50em;
 	margin: 1px;
-	box-shadow: -2px -1px 5px #2c2c2c;
+	box-shadow: -2px -1px 1px #2c2c2c;
 }
 
 .w-card2 .categories {
@@ -840,7 +843,7 @@ em {
 	flex-direction: column;
 	/* font-size: 17px; */
 	/* color: #aea9a9; */
-	background-color: #121212;
+	background-color: #1a1a1a;
 	border-radius: 10px;
 	transition: all 0.2s;
 	cursor: default;
